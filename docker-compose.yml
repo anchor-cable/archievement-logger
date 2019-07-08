@@ -5,8 +5,8 @@ services:
     image: busybox
     environment:
       TZ: Asia/Tokyo
-    # env_file:
-      # - ./laravel/.env
+    env_file:
+      - ./lumen/.env
 
   web:
     <<: *default_conf
@@ -18,7 +18,7 @@ services:
       - php-fpm:/var/run/php-fpm:rw
       - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./docker/nginx/conf.d:/etc/nginx/conf.d:ro
-      - ./laravel:/var/www/html:ro
+      - ./lumen:/var/www/html:ro
     depends_on:
       - app
 
