@@ -11,6 +11,11 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return ’-’;
+// ------------------------------------
+// routing
+// ------------------------------------
+$router->group(['middleware' => 'maintenance', 'prefix' => 'api/v1'], function ($app) {
+
+    $app->get('suzuki', 'Api\SuzukiController@index');
 });
+

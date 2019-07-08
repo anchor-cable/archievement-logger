@@ -1,3 +1,8 @@
+Achievement
+========
+自分の達成したい実績を登録しておき、達成状況を記録するアプリ。
+
+
 Installation
 ========
 
@@ -19,3 +24,5 @@ Launch
 $ docker-composer up -d web app db
 $ open http://localhost:8080
 ```
+
+https://github.com/ikasam/lumen-tutorial
